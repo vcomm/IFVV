@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interactive Free Viewpoint Videos Network</title>
+    <link rel="shortcut icon" href="img/eyes-on.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" /> 
+</head>
+<body onload="attachPage('home','home.html',initSlideShow); attachPage('ucase','used.html',initToolTips); attachPage('demo','demo.html');">
+    <header id="heading">
+        <img id="logo" src="img/3dmodel.png" style="position: absolute;left: 15px;top: 15px;width: 170px;height: 125px;">
+        <h1 id="title" style="font-size: 2.2em;color: white;">ASPECTS ™</h1>
+        <span>Interactive Free Viewpoint Videos Network</span>
+        <!--<a href="#"><h3 class="authorization" onclick="sysAutorization('login.html')" id="sign-status">LogIn</h3></a>-->
+        <!--
+        <button class="button" title="LogIn/LogUp" onclick="">
+            <img src="img/login.png" style="width: 36px; height: 36px;">
+        </button>
+        -->        
+        <div class="container" onclick="openNav(this)" contextmenu="mymenu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>                
+    </header>
+    <div id="mySidenav" class="sidenav" style="width: 0px;">                
+        <a href="#" onclick="currentSlide(1)"><b>WHAT</b></a>
+        <a href="#" onclick="currentSlide(2)"><b>HOW</b></a>
+        <a href="#demo"><b>DEMO</b></a> 
+        <a href="#used"><b>UCASE</b></a> 
+        <a href="#" onclick="currentSlide(3)"><b>PRICE</b></a>       
+        <a href="#demo"><b>LOGIN</b></a>  
+    </div>    
+    <main>
+        <div class="bgimg-1" id="home"></div>
+
+        <div style="position:relative;" id="trydemo">
+            <div style="color:white;background-color:#39454b;text-align:center;padding:1px 150px;">
+                <p style="font-size:30px;">Try Demo Free</p>
+            </div>
+        </div>
+
+        <div class="bgimg-2" id="demo"></div> 
+
+        <div style="position:relative;" id="used">
+            <div style="color:white;background-color:#39454b;text-align:center;padding:10px 150px;">
+                <p style="font-size:30px;">Business Use Case</p>
+            </div>
+        </div>
+
+        <div class="bgimg-3" id="ucase"></div> 
+            
+    </main>
+    <div id="myModal" class="modal">
+        <article style="margin: 30px"></article>
+        <span id="close" class="close" onclick="notice.hide('myModal')">&times;</span>   
+    </div>
+
+    <!-- Tooltip -->
+    <div id="tooltip" class="tooltiptexthide">
+      <span >Tooltip text</span>
+    </div>
+        
+    <footer id="footer">
+      <!-- Menu -->
+      <ul class="menu">
+        <li title="Video Communication Technologies Ltd.">Copyright © Video Communication 2015, All rights reserved.</li>
+        <li style="cursor: pointer;" title="Please click for contact US" onclick="notice.iframe(notice.show('myModal'),'http://www.foxyform.com/form.php?id=878983&sec_hash=736c851e5d6')">Contact US</li>
+        <li id="contact" >Design by Yakov Liskoff</li>
+      </ul>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

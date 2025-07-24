@@ -1,0 +1,57 @@
+
+<main id="modalCntn">
+<style type="text/css">
+.form-control, .btn {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 22px;
+    background-color: white;
+    /*background-image: url('icons/searchicon.png');*/
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.btn {
+  width: 48%;
+  border: 3px solid #a1a1a1;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+</style>
+<h2 style="color: #a1a1a1; text-align: center;font-size: 2em;">Please Autorization</h2>
+<!--<form class="form-horizontal login-form" name="login-form">-->
+<section>
+  <div class="form-group" id="uname">
+    <div class="col-lg-10">
+      <input name="username" type="text" class="form-control" id="input-username" placeholder="Username">
+    </div>
+  </div><p/>
+  <div class="form-group" id="singup" style="display: none">
+    <div class="col-lg-10">
+      <input name="email" type="email" class="form-control" id="input-email" placeholder="Email">
+    </div>
+  </div><p/>  
+  <div class="form-group" id="pswd">
+    <div class="col-lg-10">
+      <input name="password" type="password" class="form-control" id="input-password" placeholder="Password">
+    </div>
+  </div><p/>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <button type="reset" class="btn btn-primary" >Reset</button>
+      <button type="submit" class="btn btn-primary" data-loading-text="Sending..." onclick="prepareAutorization(user => { window.open('http://ifvv.herokuapp.com/?uid='+user._id,'')})">Log In</button>
+      <span class="help-block error"></span>
+    </div>
+  </div><p/>
+  <div class="form-group">
+    <span class="singex" onclick="forgotPswdSwitch(this)" lang="remember">Forgot Your Password?</span>
+    <span class="singex" onclick="signUpSwitch(this)" lang="signin" id="sign-trigger">Signup Account</span>
+  </div>
+</section>
+<main>

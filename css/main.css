@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .price {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+  }
+  .package {
+    font-size: 12px;
+    font-style: italic;
+    font-family: Verdana;
+  }
+  .donate {
+    padding: 40px;
+  }
+/*********************************************************************************/
+/* The Modal (background)                                                                        */
+/*********************************************************************************/
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10px; /* Location of the box */
+    left: 30%;
+    top: 25%;
+    width: 600px; /* Full width */
+    height: 450px; /* Full height */
+    overflow: hidden; /* Disable scroll */
+    background: #39454b;
+    opacity: 0.9;
+  /*
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }	
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 500px;
+    height: 410px;
+    max-width: 600px;
+  }
+  
+  /* Add Animation */
+  .modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .singex {
+    margin: 30px;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;    
+  }
+  .singex:hover,
+  .singex:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }  
+/*********************************************************************************/
+/* Main                                                                        */
+/*********************************************************************************/
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    position: relative;    
+    background-attachment: inherit;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;  
+  }
+  .bgimg-1 {
+    /*background-image: url('../img/space.jpg');*/
+    min-height: 700px;
+  }
+  .bgimg-2 {
+    /*background-image: url('../img/astronaft.jpg');*/
+    min-height: 500px;
+  }
+  .bgimg-3 {
+    /*background-image: url('../img/explosion.jpg');*/
+    min-height: 700px;
+  }
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+#heading {
+    position: sticky;
+    z-index: 10000;
+    width: 100%;    
+    top: 0;
+    background-color: #39454b;
+    padding: 30px;
+    color: #BDBDBD;  
+    text-align: center;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    opacity: 0.97;
+  }
+  .authorization {
+    display: inline-block;    
+    position: absolute;
+    top: 90px;
+    right: 45px;
+    color: white;
+    font-size: 1.3em;
+  }
+  .authorization:hover {color: yellow}
+  .authorization:active {color: red}
+  /*
+  .button {
+    display: inline-block;    
+    position: absolute;
+    top: 45px;
+    right: 150px;      
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #a5aaa5}
+  
+  .button:active {
+    background-color: #858b85;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  */
+  /*********************************************************************************/
+  /* Footer                                                                        */
+  /*********************************************************************************/
+  
+  #footer {
+      position: relative;
+      height: 9em;
+      line-height: 5em;
+      margin: 0;
+      background: #39454b;
+      color: #999;
+      color: rgba(185,186,187,0.5);
+      overflow: hidden;
+      border: 2px solid black;
+  }
+  
+      #footer .menu {
+          position: absolute;
+          right: 2em;
+          top: 0;
+          height: 8em;
+          line-height: 9em;
+          margin: 0;
+          cursor: pointer;
+      }
+  
+          #footer .menu li {
+              font-size: 1.25em;
+              display: inline-block;
+              line-height: 1em;
+              border-left: solid 1px rgba(145,146,147,0.25);
+              padding: 0 0 0 0.5em;
+              margin: 0 0 0 0.5em;
+          }
+
+  /*********************************************************************************/
+  /* Navigation                                                                    */
+  /*********************************************************************************/
+    .container {
+        cursor: pointer;
+        display: inline-block;    
+        position: absolute;
+        top: 50px;
+        right: 40px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;	
+    }
+    
+    .bar1, .bar2, .bar3 {
+        top: 10px;
+        width: 35px;
+        height: 5px;
+        background-color: rgb(255, 255, 255);
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+        transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+    
+    .change .bar2 {opacity: 0;}
+    
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0px;
+        position: fixed;
+        z-index: 9999;    
+        top: 180px;
+        right: 8px;
+        background-color: #39454b;
+        color: #BDBDBD;
+        overflow-x: hidden;
+        transition: 0.8s;
+        padding-top: 100px;
+        font-family:Verdana;
+        opacity: 0.9;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+
+/******************************************************/
+/*            ToolTip                                 */
+/******************************************************/
+.tips{
+  cursor: pointer;
+}
+.tooltiptexthide {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.tooltiptextshow {
+  visibility: visible;
+  max-width: 350px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: fixed;
+  z-index: 1;
+  top: 500px;
+  left: 500px;
+margin-top :  8px;
+  margin-left:  15px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;	
+}
+   

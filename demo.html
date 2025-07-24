@@ -1,0 +1,40 @@
+<style>
+.demo {
+    position: relative;
+    left: 5%;
+    margin: 5px;
+    height: 80%;  
+    width: 90%;  
+    padding-top: 100px;
+    padding-left: 200px;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 44px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #8a8a8a;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover { color: black; background-color:  #c7c7c7;}
+
+.button:active {
+  color: black;
+  background-color: #c7c7c7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+<main class="demo">
+    <ul id="collapse">
+        <li><button class="button" onclick="window.open('http://ifvv.herokuapp.com/player','')">IFVV Player</button></li>
+        <li><button class="button" onclick="window.open('http://ifvv.herokuapp.com/studio','')">IFVV Studio</button></li>
+        <li><button class="button" onclick="sysAutorization('login.html')" id="sign-status">SignUP / IN</button></li>
+    </ul>
+</main>

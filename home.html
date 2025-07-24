@@ -1,0 +1,274 @@
+<style>
+        main.home {
+            position: relative;
+            left: .5%;
+            top: 5%;
+            margin: 5px;
+            min-height: 500px;
+            max-width: 98%;
+            background-color: white;  
+            opacity: 0.95;
+            /*border: 2px solid rgb(60, 60, 60);        */
+            color: black;
+        }
+        .slides {display: none; margin: 20px;}
+        .content { margin: 10px;}
+    
+        /* Next & previous buttons */
+        .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        }
+    
+        .prev {
+        left: -15px;
+        border-radius: 3px 0 0 3px;
+        }
+    
+        /* Position the "next button" to the right */
+        .next {
+        right: -15px;
+        border-radius: 3px 0 0 3px;
+        }
+    
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        color: white;  
+        background-color: rgba(0,0,0,0.8);
+        }        
+
+        /* The dots/bullets/indicators */
+        .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+        background-color: #717171;
+        }  
+        
+        .grid-container {
+        display: grid;
+        grid-gap: 10px;
+        /*background-color: #2196F3;*/
+        background-color: #c7c7c7;
+        padding: 10px;
+        }
+        .grid-item {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        padding: 10px;
+        font-size: 24px;
+        }
+        .item1 {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        }
+        .item2 {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        }
+        .item5 {
+        grid-column: 1 / span 3;
+        grid-row: 3;
+        }                
+        .item1a {
+        grid-column: 2 / span 2;
+        grid-row: 1;
+        }
+        .item2a {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        }        
+        .grid-media {
+            text-align: center;
+        }
+        .item1b {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        }
+        .item2b {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        }
+        .item3b {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        }
+        .item4b {
+        grid-column: 4;
+        grid-row: 1 / span 2;
+        }
+        .item5b {
+        grid-column: 1 / span 4;
+        grid-row: 3;
+        }        
+        </style>
+        
+        <div style="text-align:center; padding: 10px;">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div> 
+
+        <main class="home">
+           
+            <div class="slides">
+                <section class="grid-container content">                   
+                   <div class="grid-item item1">                        
+                        <p style="text-align: left; font-size: 16px; font-family: Verdana;">
+                            Aspects™ is a system for creating and viewing natural video from various points of view on events, 
+                            allowing the user to interactively control the viewpoint and generate new views of dynamic scenes from any 3D position.                           
+                        </p>
+                   </div>
+                   <div class="grid-item item2 grid-media">
+                        <iframe width="480" height="270" src="https://www.youtube.com/embed/QIEgLPbAJE4" frameborder="0" allowfullscreen></iframe>
+                        <p style="text-align: left; font-size: 16px; font-family: Verdana;">
+                            Aspects™  allows the viewers to experience never before seen perspectives of live events,  
+                            breaks the mold of limitations as if they were wearing cameras themselves.                           
+                        </p>                            
+                   </div>
+                   <div class="grid-item item3 grid-media">
+                        <img class="grid-media tips" src="img/multi-scenes.png"  style="cursor: pointer;" title="Click for Presentation" onclick="window.open ('https://docs.google.com/presentation/d/e/2PACX-1vTbEQsjFbFiNPVeShdfctxhZshWP4E_NN5qu9a6dROSwNAsDaFjskap-1-THzMPWXsoHd4qV8FUvsUf/pub?start=false&loop=false&delayms=3000', '')">
+                   </div>  
+                   <div class="grid-item item4 grid-media">
+                        <img class="grid-media tips" src="img/3d-reconstruction.jpg"  style="cursor: pointer;" title="Click for Presentation" onclick="window.open ('https://docs.google.com/presentation/d/e/2PACX-1vTbEQsjFbFiNPVeShdfctxhZshWP4E_NN5qu9a6dROSwNAsDaFjskap-1-THzMPWXsoHd4qV8FUvsUf/pub?start=false&loop=false&delayms=3000', '')">
+                   </div>
+                   <div class="grid-item item5">
+                       <p style="text-align: left; font-size: 16px; font-family: Verdana;">
+                            With the ability to navigate freely, Aspects™ gives the user the control to see what you want, 
+                            changing the way you interact with the video, where the focus of attention can be controlled by the viewers rather than a director, meaning that each viewer may be observing and sharing a unique viewpoint scenario.                           
+                       </p>
+                   </div>                   
+                </section>
+            </div>
+    
+            <div class="slides">
+                <section  class="grid-container content">
+                    <div class="grid-item item1a">
+                        <p style="text-align: left; font-size: 16px; font-family: Verdana;">
+                            The output Multiview Video (MVV) must then be packaged suitably so that the data may be compressed and also so that the users' viewing device may easily access the relevant views to interpolate new views.  It is not enough to simply place cameras around the scene to be captured.
+                        </p>
+                    </div>
+                    <div class="grid-item item2a"  style="text-align: right;">
+                        <p style="text-align: left; font-size: 16px; font-family: Verdana;">
+                            In order to acquire the views necessary to allow a high quality rendering of the scene from any angle, several cameras are placed around the scene
+                        </p>
+                        <img class="grid-media tips" src="img/fvv-cp.png" onclick="window.open('http://ifvv.herokuapp.com/studio','')" style="cursor: pointer;" title="Click forStart IFVV studio">
+                    </div>
+                    <div class="grid-item item3">
+                        <img id="cluster" class="grid-media tips" src="img/ifvv-cluster.png" onclick="notice.iframe(notice.show('myModal'),'https://player.vimeo.com/video/221704028')" style="cursor: pointer;" title="Multiview Video Coding: Click for Play MVC Intro">
+                    </div>  
+                    <div class="grid-item item4">
+                        <img class="grid-media tips" src="img/ifvv-player.png" onclick="window.open('http://ifvv.herokuapp.com/player','')" style="cursor: pointer;" title="Click for Start IFVV player">
+                    </div>
+                    <div class="grid-item item5">
+                        <p style="text-align: left; font-size: 16px; font-family: Verdana;">
+                            Multiview video capture varies from partial (usually about 30 degrees) to complete (360 degrees) coverage of the scene. Therefore, it is possible to output stereoscopic views suitable for viewing with a 3D display or other 3D methods. Systems with more physical cameras can capture images with more coverage of the viewable scene, however, it is likely that certain regions will always be occluded from any viewpoint. A larger number of cameras should make it possible to obtain high quality output because less interpolation is needed.
+                        </p>                            
+                    </div>
+                </section>
+            </div>
+    
+            <div class="slides">
+                <section  class="grid-container content">
+                    <div class="grid-item item1b">
+                        <h5>BASIC</h5>
+                        <p>
+                            <ul  class="package">
+                                <li class="tips" title="Standalone Chrome Extensions Application">IFVV Content Studio</li>
+                                <li class="tips" title="iOS/Android: HTTP Live Stream (HLS)">Up to 4 smartphones camera support</li>
+                                <li class="tips" title="Single stream recording from various points of view on events, allowing the user to interactively control the viewpoint">Video recording up to 10 min length</li>
+                                <li class="tips" title="Build-in  on camera view virtual joystick camera motion control">IFVV Web Player</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>                        
+                                <li class="tips" title="The ability to create different scenarios for the same video and share with friends">Full Access to IFVV Network</li>
+                            </ul>
+                        </p>
+                        <h6 class="price">Price: Free (1 user for personal use)</h6>
+                    </div>
+                    <div class="grid-item item2b">
+                        <h5>COMFORT</h5>
+                        <p>
+                            <ul  class="package">
+                                <li class="tips" title="Standalone Chrome Extensions Application">IFVV Content Studio</li>
+                                <li class="tips" title="iOS/Android: HTTP Live Stream (HLS)">Up to 6 smartphones camera support</li>
+                                <li class="tips" title="Single stream recording from various points of view on events, allowing the user to interactively control the viewpoint">Video recording up to 1 hour length</li>
+                                <li class="tips" title="Build-in on camera view virtual joystick camera motion control">IFVV Web Player</li>
+                                <li class="tips" title="Chrome Extensions: Separate Joystick camera motion control / camera view on big screen">IFVV Standalone Player</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>
+                                <li class="tips" title="The ability to create different scenarios for the same video and share with friends">Full Access to IFVV Network</li>
+                            </ul>
+                        </p>
+                        <h6 class="price">Price: Comming soon (1 user per month)</h6>                            
+                    </div>
+                    <div class="grid-item item3b">
+                        <h5>PRENIUM</h5>
+                        <p>
+                            <ul  class="package">
+                                <li class="tips" title="Standalone Chrome Extensions Application">IFVV Content Studio</li>
+                                <li class="tips" title="iOS/Android: HTTP Live Stream (HLS)">Up to 10 smartphones camera support</li>
+                                <li class="tips" title="Multi streams recording from various points of view on events, allowing the user to interactively control the viewpoint">Video recording up to 10 hours length</li>
+                                <li class="tips" title="Build-in on camera view virtual joystick camera motion control">IFVV Web Player</li>
+                                <li class="tips" title="Chrome Extensions: Separate Joystick camera motion control / camera view on big screen">IFVV Standalone Player</li>
+                                <li class="tips" title="Interactive Web based unique viewpoint scenarios editor application">Web based Scenarios Editor</li>
+                                <li class="tips" title="Using Media Cluster for 3D scene reconstruction and dymanic generate new virtual cameras streams from any 3D position">Media Cluster up to 1 hours video length</li>
+                                <li>-------------------------</li>
+                                <li>-------------------------</li>
+                                <li class="tips" title="The ability to create different scenarios for the same video and share with friends">Full Access to IFVV Network</li>
+                            </ul>
+                        </p>    
+                        <h6 class="price">Price: Comming soon (1 user per month)</h6>                            
+                    </div>  
+                    <div class="grid-item item4b">
+                        <h5>ULTIMATE</h5>
+                        <p>
+                            <ul class="package">
+                                <li class="tips" title="Standalone Chrome Extensions Application">IFVV Content Studio</li>
+                                <li class="tips" title="iOS/Android: HTTP Live Stream (HLS)">Up to 10 smartphones camera support</li>
+                                <li class="tips" title="Multi streams recording from various points of view on events, allowing the user to interactively control the viewpoint">Video recording up to 100 hours length</li>
+                                <li class="tips" title="Build-in on camera view virtual joystick camera motion control">IFVV Web Player</li>
+                                <li class="tips" title="Chrome Extensions: Separate Joystick camera motion control / camera view on big screen">IFVV Standalone Player</li>
+                                <li class="tips" title="Interactive Web based unique viewpoint scenarios editor application">Web based Scenarios Editor</li>
+                                <li class="tips" title="Using Media Cluster for 3D scene reconstruction and dymanic generate new virtual cameras streams from any 3D position">Media Cluster up to 10 hours video length</li>
+                                <li class="tips" title="The feature help people involved in a common task to achieve their goals">Voice chat teamwork collaboration</li>
+                                <li class="tips" title="All Standalone Application: Studio,Editor,Player supported Separate Joystick camera motion control and additional view big screen on StartTV">Professional Standalone solution</li>
+                                <li class="tips" title="The ability to create different scenarios for the same video and share with friends">Full Access to IFVV Network</li>
+                            </ul>
+                        </p>                                
+                        <h6 class="price">Price: Comming soon (10 users per month)</h6>
+                    </div>
+                    <div class="grid-item item5b">
+                        <p style="text-align: left; font-size: 16px; font-family: Verdana;">*  All parts of the application are checked working for the browser Google Chrome</p>
+                        <p style="text-align: left; font-size: 16px; font-family: Verdana;">** The first 1000 registered users get the opportunity to use all packages for free within one year</p>
+                    </div>
+                </section>    
+            </div>        
+                
+            <a class="prev" onclick="homeSlides(-1)">&#10094;</a>
+            <a class="next" onclick="homeSlides(1)">&#10095;</a>        
+        </main>
+
+       
+                
