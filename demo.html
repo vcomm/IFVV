@@ -31,14 +31,14 @@
   transform: translateY(4px);
 }
 </style>
+<script src="./js/fvv-player/dist/fvv-player.js" type="module"></script>
 <main class="demo">
-  <h1>Comming Soon</h1>
-  <p>We are working on this page to provide you with the best experience.</p>
-  <!--
-    <ul id="collapse">
-        <li><button class="button" onclick="window.open('http://ifvv.herokuapp.com/player','')">IFVV Player</button></li>
-        <li><button class="button" onclick="window.open('http://ifvv.herokuapp.com/studio','')">IFVV Studio</button></li>
-        <li><button class="button" onclick="sysAutorization('login.html')" id="sign-status">SignUP / IN</button></li>
-    </ul>
-  -->
+
+  <fvv-player
+    pairing-provider="firebase"
+    src="manifest.json"
+    camera-map="cameramap.json"
+    radar-plugin-src="./js/fvv-player/dist/fvv-radar-sphere.js">
+  </fvv-player>
+
 </main>

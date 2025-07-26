@@ -1,0 +1,10 @@
+{
+    "tracks": [
+        { "id": "cam01", "url": "https://ia601003.us.archive.org/5/items/view-2_202507/View1.mp4" },
+        { "id": "cam02", "url": "https://ia601003.us.archive.org/5/items/view-2_202507/View2.mp4" },
+        { "id": "cam03", "url": "https://ia601003.us.archive.org/5/items/view-2_202507/View3.mp4" },
+        { "id": "cam04", "url": "https://ia601003.us.archive.org/5/items/view-2_202507/View4.mp4" },
+        { "id": "cam05", "url": "https://ia601003.us.archive.org/5/items/view-2_202507/View5.mp4" },
+        { "id": "cam06", "url": "https://ia601003.us.archive.org/5/items/view-2_202507/View6.mp4" }
+    ]
+}
