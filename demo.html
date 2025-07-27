@@ -31,6 +31,16 @@
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
+fvv-player {
+
+  --fvv-width: 1280px; 
+  --fvv-height: 720px; 
+
+  --fvv-radar-point-color: #FF69B4; /* Hot Pink */
+  --fvv-radar-point-active-color: white;
+  --fvv-radar-crosshair-color: #00FF7F; /* Spring Green */
+}
 </style>
 
 <main class="demo">
@@ -39,7 +49,8 @@
     pairing-provider="firebase"
     src="manifest.json"
     camera-map="cameramap.json"
-    radar-plugin-src="./js/fvv-player/dist/fvv-radar-sphere.js">
+    radar-plugin-src="./js/fvv-player/dist/fvv-radar-sphere.js"
+    simulation-mode>
   </fvv-player>
 
 </main>
