@@ -96,7 +96,7 @@
 /*********************************************************************************/
 /* Main                                                                        */
 /*********************************************************************************/
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
     position: relative;    
     background-attachment: inherit;
     background-position: center top;
@@ -115,6 +115,10 @@
   .bgimg-3 {
     /*background-image: url('../img/explosion.jpg');*/
     min-height: 700px;
+  }
+  .bgimg-4 {
+    /*background-image: url('../img/earth.jpg');*/
+    min-height: 400px;
   }
 /*********************************************************************************/
 /* Header                                                                        */
